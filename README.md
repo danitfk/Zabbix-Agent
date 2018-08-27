@@ -18,10 +18,27 @@ A simple Ansible playbook to install zabbix agent on server.
 - CentOS/Redhat 7
 
 # How to use:
+Create a playbook then run the role.
+Example playbook:
+```
+---
+- hosts: 192.168.1.2
+  become: yes
+  become_method: sudo
+  roles:
+       - { role: Zabbix-Agent, zabbix_agent_server: 192.168.1.1 }
+
+```
+then clone the repo:
+```
+git clone https://github.com/danitfk/Zabbix-Agent.git
+```
 Before run the playbook, change some variables in main.yaml.
 ```
 zabbix_agent_server: ZABBIX-SERVER-IP
 ```
 after changing localhost to desired IP of Zabbix Server / Zabbix proxy then run the playbook.
 
-
+```
+ansible-playbok main.yaml
+```
