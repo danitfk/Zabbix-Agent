@@ -16,6 +16,7 @@ A simple Ansible playbook to install zabbix agent on server.
 - Debian 9 Stretch
 - CentOS/Redhat 6
 - CentOS/Redhat 7
+![alt Ansible playbook install zabbix agent on linux server](https://github.com/danitfk/Zabbix-Agent/blob/master/screenshots/Zabbix-Agent-Ansible.png?raw=true)
 
 # How to use:
 Create a playbook then run the role.
