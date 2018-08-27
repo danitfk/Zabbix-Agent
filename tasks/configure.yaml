@@ -1,0 +1,14 @@
+---
+  - lineinfile: dest=/etc/zabbix/zabbix_agentd.conf regexp="{{ item.var }}=" line="{{ item.var }}={{ item.value }}"
+    with_items:
+      - { var: "ServerActive", value: "{{zabbix_agent_server}}:{{zabbix_agent_server_port}}"}
+      - { var: "Hostname", value: "{{ansible_hostname}}"}
+      - { var: "Server", value: "{{zabbix_agent_server}}"}
+      - { var: "HostMetadataItem", value: "system.uname"}
+      - { var: "RefreshActiveChecks", value: "60"}
+    notify: restart zabbix-agent
+     
+  - lineinfile: dest=/etc/zabbix/zabbix_agentd.conf regexp="{{ item }}=" state=absent
+    with_items:
+      - "Include="
+    notify: restart zabbix-agent

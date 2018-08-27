@@ -1,0 +1,24 @@
+---
+  - name: Check if any version of agent is already installed
+    stat: path=/usr/sbin/zabbix_agentd
+    register: zabbix_agent_installed
+
+  - include: install.yaml
+    when: not zabbix_agent_installed.stat.exists
+
+  - include: configure.yaml
+    when: not zabbix_agent_installed.stat.exists
+  
+  - name: Create log directory
+    file: path=/var/log/zabbix state=directory owner=zabbix group=zabbix mode=0775
+    when: not zabbix_agent_installed.stat.exists
+
+  - name: Start Zabbix agent service
+    service: name=zabbix-agent state=started enabled=yes
+    ignore_errors: yes
+    register: zabbix_service
+    when: not zabbix_agent_installed.stat.exists
+
+  - name: Start Zabbix agent if service module fails
+    shell: pgrep zabbix_agentd || /usr/sbin/zabbix_agentd
+    when: zabbix_service|failed
