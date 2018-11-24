@@ -21,7 +21,7 @@ A simple Ansible playbook to install zabbix agent on server.
 
 # How to use:
 Create a playbook then run the role.
-Example playbook (called main.yml):
+Example playbook (called main.yml, keep in mind create main.yml one directory before Zabbix-Agent repo):
 ```
 ---
 - hosts: 192.168.1.2
