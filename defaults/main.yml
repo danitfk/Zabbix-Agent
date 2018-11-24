@@ -1,5 +1,3 @@
 ---
-# Zabbix server to connect to
-zabbix_agent_server: localhost
 # Zabbix port in the server to connect to
 zabbix_agent_server_port: 10050
