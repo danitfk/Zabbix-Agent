@@ -1,5 +1,7 @@
 # Zabbix Agent Playbook
 
+[![Build Status](https://travis-ci.org/danitfk/Zabbix-Agent.svg?branch=master)](https://travis-ci.org/danitfk/Zabbix-Agent)
+
 A simple Ansible playbook to install zabbix agent on server.
 
   - Add Zabbix release repository (v3.4)
@@ -16,6 +18,7 @@ A simple Ansible playbook to install zabbix agent on server.
 - Debian 9 Stretch
 - CentOS/Redhat 6
 - CentOS/Redhat 7
+
 # To Do:
 - Add rule into Firewall (ufw)
 
