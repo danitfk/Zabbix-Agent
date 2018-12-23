@@ -16,4 +16,4 @@ install:
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
 
 script:
-  - ansible-playbook -i ../Zabbix-Agent/tests/inventory ../Zabbix-Agent/tests/test.yml --syntax-check
+  - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
