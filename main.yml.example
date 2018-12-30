@@ -1,4 +1,4 @@
 ---
 - hosts: Galera_Cluster
   roles:
-    - ../Zabbix-Agent
+    - ../Zabbix-Agent, zabbix_agent_server: 172.10.10.1
