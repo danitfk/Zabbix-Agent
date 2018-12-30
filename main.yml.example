@@ -1,0 +1,4 @@
+---
+- hosts: Galera_Cluster
+  roles:
+    - ../Zabbix-Agent
