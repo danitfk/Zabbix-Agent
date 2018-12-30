@@ -1,0 +1,4 @@
+---
+- hosts: MY-Servers
+  roles:
+    - ../Zabbix-Agent
