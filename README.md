@@ -7,7 +7,8 @@ A simple Ansible playbook to install zabbix agent on server.
   - Add Zabbix release repository (v3.4)
   - Install latest Zabbix agent
   - Enable zabbix Agent at boot
-
+  - Configure Zabbix Server 
+  - Configure Firewall (UFW,Firewalld if enabled)
 # Supported OS:
 
 - Ubuntu 14.04 Trusty LTS
@@ -20,7 +21,6 @@ A simple Ansible playbook to install zabbix agent on server.
 - CentOS/Redhat 7
 
 # To Do:
-- Add rule into Firewall (ufw)
 - Supports multiple version of Zabbix (v3.2,v3.0,v4.0)
 
 # How to use:
