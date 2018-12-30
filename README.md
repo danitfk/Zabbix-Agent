@@ -21,6 +21,7 @@ A simple Ansible playbook to install zabbix agent on server.
 
 # To Do:
 - Add rule into Firewall (ufw)
+- Supports multiple version of Zabbix (v3.2,v3.0,v4.0)
 
 # How to use:
 Create a playbook then run the role.
