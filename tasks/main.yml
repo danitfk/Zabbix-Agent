@@ -22,3 +22,12 @@
   - name: Start Zabbix agent if service module fails
     shell: pgrep zabbix_agentd || /usr/sbin/zabbix_agentd
     when: zabbix_service|failed
+
+  - name: Add Zabbix Server to Firewall (ufw)
+    ufw:
+      rule: allow
+      port: 10050
+      proto: tcp
+      src: "{{ zabbix_agent_server }}"
+    when: ansible_os_family == "Debian"
+
