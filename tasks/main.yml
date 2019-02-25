@@ -29,5 +29,5 @@
       port: 10050
       proto: tcp
       src: "{{ zabbix_agent_server }}"
-    when: ansible_os_family == "Debian"
+    when: ansible_os_family == "Debian" and firewall
 
