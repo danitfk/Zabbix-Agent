@@ -1,3 +1,5 @@
 ---
 # Zabbix port in the server to connect to
 zabbix_agent_server_port: 10050
+zabbix_agent_version: 4.0
+firewall: false
