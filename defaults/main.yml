@@ -1,4 +1,8 @@
 ---
 # Zabbix port in the server to connect to
 zabbix_agent_server_port: 10050
+<<<<<<< HEAD
+=======
+zabbix_agent_version: 4.0
+>>>>>>> 141b902... Manage firewall if defined in vars
 firewall: false
