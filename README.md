@@ -28,8 +28,7 @@ Example playbook (called main.yml, keep in mind create main.yml one directory be
 ```
 ---
 - hosts: 192.168.1.2
-  become: yes
-  become_method: sudo
+  become: true
   roles:
        - { role: Zabbix-Agent, zabbix_agent_server: 192.168.1.1 }
 

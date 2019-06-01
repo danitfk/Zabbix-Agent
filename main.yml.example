@@ -1,4 +1,5 @@
 ---
 - hosts: Galera_Cluster
+  become: true
   roles:
     - { role: ../Zabbix-Agent, zabbix_agent_server: 172.10.10.1 }
